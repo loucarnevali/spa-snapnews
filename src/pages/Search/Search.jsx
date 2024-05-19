@@ -6,16 +6,15 @@ import { ContainerResults, SearchPosts, TextResults } from './SearchStyled';
 
 export default function Search() {
   const { title } = useParams();
-  const [news, setNews] = useState([]);
+  const [posts, setPosts] = useState([]);
 
   async function search() {
     try {
-      const newsApi = await searchPosts(title);
-      setNews(newsApi.data.results);
-      // console.log(newsApi.data.results);
+      const postsApi = await searchPosts(title);
+      setPosts(postsApi.data.foundPosts);
     } catch (error) {
       console.log(error);
-      setNews([]);
+      setPosts([]);
     }
   }
 
@@ -27,9 +26,9 @@ export default function Search() {
     <ContainerResults>
       <TextResults>
         <span>
-          {news.length
-            ? `Found ${news.length} ${
-                news.length > 1 ? 'results' : 'result'
+          {posts.length
+            ? `Found ${posts.length} ${
+                posts.length > 1 ? 'results' : 'result'
               } for:`
             : 'Not found results for:'}
         </span>
@@ -38,14 +37,14 @@ export default function Search() {
 
       <SearchPosts>
         {/* Map by card component */}
-        {news.map((newsItem) => (
+        {posts.map((item) => (
           <Card
-            key={newsItem.id}
-            title={newsItem.title}
-            text={newsItem.text}
-            banner={newsItem.banner}
-            likes={newsItem.likes}
-            comments={newsItem.comments}
+            key={item.id}
+            title={item.title}
+            text={item.text}
+            banner={item.banner}
+            likes={item.likes}
+            comments={item.comments}
           />
         ))}
       </SearchPosts>

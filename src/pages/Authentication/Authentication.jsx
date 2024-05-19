@@ -17,7 +17,6 @@ export default function Authentication() {
     formState: { errors: errorsSignup },
   } = useForm({
     resolver: zodResolver(signupSchema),
-    defaultValues: { name: '', email: '', password: '', confirmPassword: '' },
   });
 
   const {
@@ -26,7 +25,6 @@ export default function Authentication() {
     formState: { errors: errorsSignin },
   } = useForm({
     resolver: zodResolver(signinSchema),
-    defaultValues: { email: '', password: '' },
   });
 
   async function inHandleSubmit(data) {
