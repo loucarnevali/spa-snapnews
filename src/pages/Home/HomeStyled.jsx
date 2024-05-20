@@ -8,7 +8,7 @@ export const HomeBody = styled.section`
   width: 90%;
 
   @media (max-width: 800px) {
-    width: 98%;
+    width: 95%;
     grid-template-columns: 1fr;
   }
 `;
@@ -19,7 +19,7 @@ export const HomeHeader = styled.section`
   margin: 1rem auto;
 
   @media (max-width: 800px) {
-    width: 98%;
+    width: 95%;
     flex-direction: column;
     align-items: center;
   }

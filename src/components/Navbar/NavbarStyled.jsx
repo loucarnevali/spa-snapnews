@@ -35,7 +35,7 @@ export const InputSpace = styled.div`
   align-items: center;
 
   @media (max-width: 800px) {
-    width: 180px;
+    width: 130px;
   }
 
   button {
@@ -50,6 +50,10 @@ export const InputSpace = styled.div`
     padding: 0.5rem;
     cursor: pointer;
     transition: 0.3s;
+
+    @media (max-width: 800px) {
+      padding: 0rem;
+    }
   }
 
   button:hover {
