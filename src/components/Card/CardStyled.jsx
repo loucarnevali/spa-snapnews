@@ -96,4 +96,8 @@ export const ErrorContainer = styled.span`
   justify-content: center;
   font-size: 1rem;
   border-radius: 7px;
+
+  @media (max-width: 800px) {
+    font-size: 0.5rem;
+  }
 `;
