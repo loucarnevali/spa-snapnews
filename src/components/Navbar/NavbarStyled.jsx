@@ -11,6 +11,10 @@ export const Nav = styled.nav`
   background-color: #fff;
   z-index: 1;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+
+  @media (max-width: 800px) {
+    padding: 0.5rem;
+  }
 `;
 
 export const ImageLogo = styled.img`
@@ -18,6 +22,10 @@ export const ImageLogo = styled.img`
   height: 3.5;
   object-fit: cover;
   cursor: pointer;
+
+  @media (max-width: 650px) {
+    width: 4rem;
+  }
 `;
 
 export const InputSpace = styled.div`
@@ -25,7 +33,10 @@ export const InputSpace = styled.div`
   width: 200px;
   display: flex;
   align-items: center;
-  /* margin-left: 1rem; */
+
+  @media (max-width: 800px) {
+    width: 180px;
+  }
 
   button {
     position: absolute;
@@ -55,6 +66,10 @@ export const InputSpace = styled.div`
     width: 100%;
     border-radius: 0.3rem;
 
+    @media (max-width: 800px) {
+      font-size: 0.8rem;
+    }
+
     &:focus {
       border: 1px solid #e7582f;
     }
@@ -78,11 +93,19 @@ export const UserLoggedSpace = styled.div`
   max-width: 100%;
   gap: 1rem;
 
+  @media (max-width: 650px) {
+    gap: 0.5rem;
+  }
+
   h2 {
     font-size: 1.1rem;
     color: #f17c17;
     transition: all 0.3s;
     cursor: pointer;
+
+    @media (max-width: 650px) {
+      font-size: 0.8rem;
+    }
   }
 
   h2:hover {
@@ -93,7 +116,12 @@ export const UserLoggedSpace = styled.div`
     font-size: 1.5rem;
     color: #f17c17;
     cursor: pointer;
+
+    @media (max-width: 800px) {
+      font-size: 0.8rem;
+    }
   }
+
   i:hover {
     color: #e7582f;
   }

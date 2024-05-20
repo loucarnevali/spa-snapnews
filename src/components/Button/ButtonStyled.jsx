@@ -12,11 +12,15 @@ export const ButtonSpace = styled.button`
   border-radius: 0.3rem;
   font-family: Roboto, arial;
   width: auto;
-  font-weight: 500;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 
   &:hover {
     background-color: #e7582f;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
   }
 `;

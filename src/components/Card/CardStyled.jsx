@@ -37,10 +37,18 @@ export const CardHeader = styled.article`
   width: 100%;
   font-size: ${(props) => (props.top ? '1.5rem' : '.9rem')};
 
+  @media (max-width: 800px) {
+    font-size: 0.9rem;
+  }
+
   h2 {
     margin-bottom: 1rem;
     font-size: ${(props) => (props.top ? '3rem' : '1.1rem')};
     width: 100%;
+
+    @media (max-width: 800px) {
+      font-size: 0.9rem;
+    }
   }
 
   span {

@@ -18,6 +18,11 @@ export const SearchPosts = styled.div`
   grid-gap: 15px;
   margin: 1rem auto;
   width: 80%;
+
+  @media (max-width: 800px) {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const TextResults = styled.div`

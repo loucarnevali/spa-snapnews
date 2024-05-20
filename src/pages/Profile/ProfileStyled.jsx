@@ -62,6 +62,10 @@ export const ProfileAvatar = styled.img`
   border: solid 5px #fff;
   object-fit: cover;
   object-position: center;
+
+  @media (max-width: 900px) {
+    width: 5rem;
+  }
 `;
 
 export const ProfileActions = styled.div`
@@ -100,5 +104,9 @@ export const ProfilePosts = styled.main`
     font-weight: bold;
     color: #e7582f;
     margin-top: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
   }
 `;

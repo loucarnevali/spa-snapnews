@@ -8,6 +8,12 @@ export const AuthContainer = styled.div`
   width: 70%;
   margin: 0 auto;
 
+  @media (max-width: 550px) {
+    /* background-color: red; */
+    flex-direction: column;
+    margin: 10px auto;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -28,9 +34,18 @@ export const Section = styled.section`
     props.type === 'signin' ? '#e7582f' : 'white'};
   color: ${(props) => (props.type === 'signup' ? '#e7582f' : 'white')};
 
+  @media (max-width: 550px) {
+    padding: 1rem;
+    height: ${(props) => (props.type === 'signin' ? '200px' : '300px')};
+  }
+
   h2 {
     font-size: 2rem;
     text-align: center;
     font-weight: 700;
+
+    @media (max-width: 550px) {
+      font-size: 1.5rem;
+    }
   }
 `;
