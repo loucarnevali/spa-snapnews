@@ -99,5 +99,6 @@ export const ErrorContainer = styled.span`
 
   @media (max-width: 800px) {
     font-size: 0.5rem;
+    padding: 0.3rem;
   }
 `;
