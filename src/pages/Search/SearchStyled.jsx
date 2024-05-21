@@ -33,6 +33,10 @@ export const TextResults = styled.div`
   box-shadow: rgba(50, 50, 105, 0.15) opx 2px 5 px 0px,
     rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 
+  @media (max-width: 800px) {
+    width: 60%;
+  }
+
   span {
     font-size: 1rem;
   }
